@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.junit.entity.dto.BookDto;
+import com.junit.dto.BookDto;
 import com.junit.service.BookService;
 
 /**
@@ -20,6 +20,11 @@ public class BookController {
 	@Autowired
 	private BookService bookService;
 	
+	 @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
+	 
 	@GetMapping("/test")
 	public ResponseEntity<Object> testEndPoint(){
 		return ResponseEntity.ok("Welcome to BOOK APPLICARION");

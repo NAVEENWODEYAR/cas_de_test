@@ -1,4 +1,4 @@
-package com.junit.entity.dto;
+package com.junit.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.junit.entity.Book;

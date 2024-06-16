@@ -1,8 +1,12 @@
 package com.junit.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
-import com.junit.entity.dto.ApiResponse;
-import com.junit.entity.dto.BookDto;
+
+import com.junit.dto.ApiResponse;
+import com.junit.dto.BookDto;
+import com.junit.entity.Book;
 
 /**
  * @author Naveen K Wodeyar
@@ -12,7 +16,7 @@ import com.junit.entity.dto.BookDto;
 @Service
 public interface BookService {
 
-	ApiResponse<String> getBooksListing();
+	List<Book> getBooksListing();
 
 	ApiResponse<String> getBookById(Long bookId);
 
