@@ -6,7 +6,8 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
+		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.junit</groupId>
 	<artifactId>cas_de_test</artifactId>
@@ -61,6 +62,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -69,12 +78,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
+					
 				</configuration>
 			</plugin>
 		</plugins>
