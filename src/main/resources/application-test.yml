@@ -1,7 +1,9 @@
 
 server:
   port: 42315
-  
+  servlet:
+    context-path: /junit/book
+    
 spring:
   application:
     name: TEST ENVIRONMENT
