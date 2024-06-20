@@ -20,7 +20,7 @@ public interface BookService {
 
 	ApiResponse<String> getBookById(Long bookId);
 
-	ApiResponse<String> addBookDetails(BookDto request);
+	String addBookDetails(BookDto request);
 
 	ApiResponse<String> updateBookDetails(Long bookId, BookDto request);
 

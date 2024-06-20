@@ -27,7 +27,6 @@ public class BookServiceImpl implements BookService {
 	public List<Book> getBooksListing() {
 		List<Book> bookList = bookRepository.findAll();
 		return bookList;
-		
 	}
 
 	@Override
@@ -37,23 +36,19 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public ApiResponse<String> addBookDetails(BookDto request) {
-		// TODO Auto-generated method stub
-		return null;
+	public String addBookDetails(BookDto request) {
+		Book book = new Book(request);
+		bookRepository.save(book);
+		return "Book added successfully,";
 	}
 
 	@Override
 	public ApiResponse<String> updateBookDetails(Long bookId, BookDto request) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public ApiResponse<String> deleteBookDetails(Long bookId) {
-		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
-	
 }
