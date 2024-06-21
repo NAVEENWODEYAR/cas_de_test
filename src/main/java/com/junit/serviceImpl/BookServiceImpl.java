@@ -30,8 +30,8 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public ApiResponse<String> getBookById(Long bookId) {
-		// TODO Auto-generated method stub
+	public BookDto getBookById(Long bookId) {
+		Book bookDto = bookRepository.findById(bookId).orElseThrow();
 		return null;
 	}
 

@@ -18,7 +18,7 @@ public interface BookService {
 
 	List<Book> getBooksListing();
 
-	ApiResponse<String> getBookById(Long bookId);
+	BookDto getBookById(Long bookId);
 
 	String addBookDetails(BookDto request);
 
