@@ -1,4 +1,3 @@
-
 package com.junit.entity;
 
 import com.junit.dto.BookDto;
@@ -32,9 +31,6 @@ public class Book {
 	
 	private Integer bkRating;
 	
-	/**
-	 * @param request
-	 */
 	public Book(BookDto request) {
 		this.bookId = request.getBookId();
 		this.bkName = request.getBkName();
