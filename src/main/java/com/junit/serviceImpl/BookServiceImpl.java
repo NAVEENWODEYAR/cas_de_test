@@ -2,10 +2,9 @@ package com.junit.serviceImpl;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.junit.dto.ApiResponse;
 import com.junit.dto.BookDto;
 import com.junit.entity.Book;
 import com.junit.repo.BookRepository;
@@ -43,12 +42,16 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public ApiResponse<String> updateBookDetails(Long bookId, BookDto request) {
-		return null;
+	public String updateBookDetails(Long bookId, BookDto request) {
+		Book book = bookRepository.findById(bookId).orElseThrow();
+		BeanUtils.copyProperties(request, book);
+		bookRepository.save(book);
+		return "Updated successfully,";
 	}
 
 	@Override
-	public ApiResponse<String> deleteBookDetails(Long bookId) {
-		return null;
+	public String deleteBookDetails(Long bookId) {
+		bookRepository.deleteById(bookId);
+		return "deleted sucessfully,";
 	}
 }

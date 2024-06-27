@@ -22,8 +22,8 @@ public interface BookService {
 
 	String addBookDetails(BookDto request);
 
-	ApiResponse<String> updateBookDetails(Long bookId, BookDto request);
+	String updateBookDetails(Long bookId, BookDto request);
 
-	ApiResponse<String> deleteBookDetails(Long bookId);
+	String deleteBookDetails(Long bookId);
 
 }
