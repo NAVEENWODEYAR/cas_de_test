@@ -3,7 +3,11 @@ package com.junit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
 import com.junit.pojo.Calculator;
@@ -58,6 +62,21 @@ public class CalculatorTest {
 	@AfterAll
 	public static void cleanUp() {
 		System.out.println("Test cases completed: "+new Date());
+	}
+	
+	
+	@Test
+	public void arrayTest() {
+		int arr[] = {1,2,3,4,5};
+		int arr2[] = Arrays.copyOf(arr, arr.length);
+		Assertions.assertArrayEquals(arr, arr2,"Test case for arrays");
+	}
+	
+	@Test
+	public void listTest() {
+		List<Integer> list = Arrays.asList(1,2,3,4,5);
+		List<Integer> list1 = new ArrayList<>(list);
+		Assertions.assertIterableEquals(list, list1,"Test case for list");
 	}
 	
 }
