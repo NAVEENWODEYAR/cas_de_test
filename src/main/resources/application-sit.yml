@@ -1,0 +1,25 @@
+
+server:
+  port: 42315
+  servlet:
+    context-path: /junit/book
+    
+spring:
+  application:
+    name: SIT ENVIRONMENT
+    
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/junitdb?createDatabaseIfNotExist=true
+    username: ${Database}
+    password: ${Password}
+  jpa:
+    database: mysql
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+  data:
+    jpa:
+      repositories:
+        enabled: true
