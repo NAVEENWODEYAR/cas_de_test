@@ -10,7 +10,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
-import com.junit.pojo.Calculator;
+
+import com.junit.dto.Calculator;
 
 /**
  * @author Naveen K Wodeyar

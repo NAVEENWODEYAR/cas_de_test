@@ -1,5 +1,5 @@
 
-package com.junit.pojo;
+package com.junit.dto;
 
 /**
  * @author Naveen K Wodeyar
