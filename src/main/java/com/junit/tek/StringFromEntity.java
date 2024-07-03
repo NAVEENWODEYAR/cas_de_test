@@ -22,7 +22,7 @@ public class StringFromEntity {
 					  stList.add(new Student(7L,"Genny","12","9054525245",98.00));
 					  
 	  List<String> list = stList.stream().map(Student::getStName).toList();
-	  System.out.println("Studnet list "+stList+" \n names list "+list);
+	  System.out.println("Student List "+stList+" \n Names"+list);
 	}
 
 }
