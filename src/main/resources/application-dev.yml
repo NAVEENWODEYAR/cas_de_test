@@ -4,7 +4,7 @@ server:
  
 spring:
   application:
-    name: TEST ENVIRONMENT
+    name: DEV ENVIRONMENT
     
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
