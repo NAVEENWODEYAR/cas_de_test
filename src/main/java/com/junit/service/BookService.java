@@ -3,8 +3,6 @@ package com.junit.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-
-import com.junit.dto.ApiResponse;
 import com.junit.dto.BookDto;
 import com.junit.entity.Book;
 
