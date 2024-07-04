@@ -54,5 +54,7 @@ public class BookController {
 	public ResponseEntity<Object> deleteBookDetails(@PathVariable Long bookId){
 		return ResponseEntity.ok(bookService.deleteBookDetails(bookId));
 	}
+	
+	
 
 }
