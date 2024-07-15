@@ -19,7 +19,6 @@ public class StringFromEntity {
 					  stList.add(new Student(4L,"Diana","12","9054525245",98.00));
 					  stList.add(new Student(5L,"Emma","12","9054525245",90.00));
 					  stList.add(new Student(6L,"Flora","12","9054525245",92.00));
-					  stList.add(new Student(7L,"Genny","12","9054525245",98.00));
 					  
 	  List<String> list = stList.stream().map(Student::getStName).toList();
 	  System.out.println("Student List "+stList+" \n Names"+list);
