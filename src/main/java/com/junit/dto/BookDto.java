@@ -3,6 +3,7 @@ package com.junit.dto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.junit.entity.Book;
 
+import jakarta.persistence.Column;
 import lombok.*;
 
 /**
@@ -18,14 +19,19 @@ import lombok.*;
 @JsonInclude
 public class BookDto {
 	
+	@Column(name = "BOOK_ID")
 	private Long bookId;
 	
+	@Column(name = "BOOK_NAME")
 	private String bkName;
 	
+	@Column(name = "BOOK_AUTHOR")
 	private String bkAuthor;
 	
+	@Column(name = "BOOK_PRICE")
 	private Double bkPrice;
 	
+	@Column(name = "BOOK_RATING")
 	private Integer bkRating;
 
 	public interface Create{}
