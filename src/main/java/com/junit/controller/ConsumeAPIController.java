@@ -18,7 +18,7 @@ public class ConsumeAPIController {
 	@Autowired
 	private ConsumeAPI consumeAPI;
 	
-	@GetMapping("/get-byId/{}")
+	@GetMapping("/get-byId/{pId}")
 	public ResponseEntity<Object> getEmpById(@PathVariable Long pId){
 		return ResponseEntity.ok(consumeAPI.getProducts(pId));
 	}
