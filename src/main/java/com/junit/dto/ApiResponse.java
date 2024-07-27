@@ -17,5 +17,6 @@ public class ApiResponse<T> {
 
 	private String msg;
 	private Boolean status;
+	private Object body;
 	
 }

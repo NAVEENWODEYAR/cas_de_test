@@ -10,4 +10,5 @@ import com.junit.entity.Book;
  */
 public interface BookRepository extends JpaRepository<Book, Long>{
 
+	public void findByBkName(String pBkName);
 }

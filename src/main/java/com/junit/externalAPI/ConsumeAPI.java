@@ -13,9 +13,9 @@ public class ConsumeAPI {
 	
 	RestTemplate restTemplate = new RestTemplate();
 	
-	public String getProducts(Long pId) {
+	public Object getProducts(Long pId) {
 		String url = "https://dummyjson.com/products/"+pId;
-		return restTemplate.getForObject(url, String.class);
+		return restTemplate.getForObject(url, Object.class);
 	}
 	
 	
