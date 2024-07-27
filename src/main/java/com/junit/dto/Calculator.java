@@ -4,7 +4,7 @@ package com.junit.dto;
 /**
  * @author Naveen K Wodeyar
  * @date 16-06-2024
- * @apiNote basic calculator class for testcase demonstration,
+ * @apiNote basic calculator class for unit test demonstration,
  *
  */
 public class Calculator {

@@ -2,6 +2,8 @@ package com.junit.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
 /**
@@ -14,8 +16,10 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @JsonInclude
+@Entity
 public class Student {
 
+	@Id
 	private Long stId;
 	
 	private String stName;

@@ -1,6 +1,7 @@
 package com.junit.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,9 +22,16 @@ public class BookController {
 	private BookService bookService;
 	
 	 @GetMapping("/hello")
-    public String hello() {
-        return "Hello, World!";
+    public ResponseEntity<?> hello() {
+        return ResponseEntity.ok("Hello, World!");
     }
+	 
+	 @GetMapping("/custom")
+	    public ResponseEntity<String> getCustom() {
+	        return ResponseEntity.status(HttpStatus.CREATED)
+	                             .header("Custom-Header", "CustomValue")
+	                             .body("Custom Response");
+	    }
 	 
 	@GetMapping("/test")
 	public ResponseEntity<Object> testEndPoint(){
