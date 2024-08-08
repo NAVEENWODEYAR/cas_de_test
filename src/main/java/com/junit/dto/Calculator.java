@@ -1,6 +1,4 @@
-
 package com.junit.dto;
-
 /**
  * @author Naveen K Wodeyar
  * @date 16-06-2024
