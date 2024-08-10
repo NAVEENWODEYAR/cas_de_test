@@ -1,6 +1,6 @@
 
 server:
-  port: 8182
+  port: 7080
  
 spring:
   application:
@@ -21,3 +21,6 @@ spring:
     jpa:
       repositories:
         enabled: true
+mvc:
+  pathmatch:
+    matching-strategy: ANT_PATH_MATCHER
