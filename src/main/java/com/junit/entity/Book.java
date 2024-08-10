@@ -2,6 +2,7 @@ package com.junit.entity;
 
 import com.junit.dto.BookDto;
 
+import io.swagger.annotations.ApiModel;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,6 +12,7 @@ import lombok.*;
  * @apiDoc com.junit.entity
  */
 
+@ApiModel(description = "Stores the book details,")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
