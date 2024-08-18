@@ -1,5 +1,7 @@
 package com.junit.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,22 +12,29 @@ import com.junit.service.BookService;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 /**
  * @author Naveen K Wodeyar
  * @date 16-Jun-2024
  * @apiDoc com.junit.controller
  */
+@Tag(name = "Book_Controller",description = "Books related operations/API's")
 @RestController
 @RequestMapping("/api/v1/book")
 public class BookController {
 
+	public static final Logger log = LoggerFactory.getLogger(BookController.class);
 	@Autowired
 	private BookService bookService;
 
 	@ApiOperation(value = " ", notes = "Test Endpoint", response = ResponseEntity.class)
 	@GetMapping("/hello")
 	public ResponseEntity<?> hello() {
+		log.info("Inside Test endpoint");
+		log.error("Test EndPoint");
+		log.debug("Test EndPoint");
+		log.trace("Test EndPoint");
 		return ResponseEntity.ok("Hello, World!");
 	}
 
@@ -37,6 +46,11 @@ public class BookController {
 
 	@GetMapping("/test")
 	public ResponseEntity<Object> testEndPoint() {
+		log.trace("Test EndPoint");
+		log.info("Inside Test endpoint");
+		log.warn("Test EndPoint");
+		log.debug("Test EndPoint");
+		log.trace("Test EndPoint");
 		return ResponseEntity.ok("Welcome to BOOK APPLICARION");
 	}
 
