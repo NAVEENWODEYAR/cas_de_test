@@ -1,3 +1,4 @@
+<!-- 
 <configuration>
     <appender name="myConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -7,14 +8,9 @@
 
     <appender name="myFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <!-- Log file pattern with daily rolling and compression -->
-            <fileNamePattern>target/application-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
-            <!-- Set max file size to 1 GB -->
-            <maxFileSize>100 MB</maxFileSize>
-            <!-- Keep log files for only 1 day -->
-            <maxHistory>1</maxHistory>
-            <!-- Total size limit for the logs -->
-            <totalSizeCap>1GB</totalSizeCap>
+            <fileNamePattern>target/cas_de_test-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+            <maxHistory>10</maxHistory>
         </rollingPolicy>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
@@ -26,3 +22,4 @@
         <appender-ref ref="myFileAppender"/>
     </root>
 </configuration>
+ -->
