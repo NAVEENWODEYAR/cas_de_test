@@ -13,36 +13,36 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-@OpenAPIDefinition(
-		info = @Info(
-				title = "API TESTING",
-				version = "1.0",
-				description = "Testing REST Endpints using Mockito,",
-				termsOfService = "http://termsOfService.url",
-				contact = @Contact(
-						name = "Naveen K Wodeyar",
-						email = "naveen@n.in",
-						url = "http://support.url"
-				),
-				license = @License(
-						name = "Apache 2.0",
-						url = "http://www.apache.org/licenses/LICENSE-2.0.html"
-				)
-		),
-		servers = {
-				@Server(
-						url = "http://localhost:7070",
-						description = "Development server",
-						variables = {
-								@ServerVariable(
-										name = "port",
-										description = "Port number",
-										defaultValue = "7070"
-								)
-						}
-				)
-		}
-)
+//@OpenAPIDefinition(
+//		info = @Info(
+//				title = "API TESTING",
+//				version = "1.0",
+//				description = "Testing REST Endpints using Mockito,",
+//				termsOfService = "http://termsOfService.url",
+//				contact = @Contact(
+//						name = "Naveen K Wodeyar",
+//						email = "naveen@n.in",
+//						url = "http://support.url"
+//				),
+//				license = @License(
+//						name = "Apache 2.0",
+//						url = "http://www.apache.org/licenses/LICENSE-2.0.html"
+//				)
+//		),
+//		servers = {
+//				@Server(
+//						url = "http://localhost:7070",
+//						description = "Development server",
+//						variables = {
+//								@ServerVariable(
+//										name = "port",
+//										description = "Port number",
+//										defaultValue = "7070"
+//								)
+//						}
+//				)
+//		}
+//)
 @SpringBootApplication
 public class CasDeTestApplication {
 
@@ -51,19 +51,4 @@ public class CasDeTestApplication {
 		System.out.println("\nSWAAGER\n SPRINGFOX\n");
 	}
 	
-//	@Bean
-//	public Docket docket() {
-//		return new Docket(DocumentationType.SWAGGER_2)
-//						.select()
-//						.paths(PathSelectors.ant("/api/v1"))
-//						.apis(RequestHandlerSelectors.basePackage("com.junit"))
-//						.build()
-//						.apiInfo(apiCustomData());
-//	}
-//	
-//	private ApiInfo apiCustomData() {
-//		return new ApiInfo("API Testing",
-//				"","","","","","");
-//	}
-
 }
