@@ -31,6 +31,8 @@ public class BookController {
 	@ApiOperation(value = " ", notes = "Test Endpoint", response = ResponseEntity.class)
 	@GetMapping("/hello")
 	public ResponseEntity<?> hello() {
+
+System.out.println("Log levels");
 		log.info("Inside Test endpoint");
 		log.error("Test EndPoint");
 		log.debug("Test EndPoint");
